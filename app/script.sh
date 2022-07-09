@@ -6,6 +6,8 @@ docker push fabiocaettano74/web-nginx:green
 
 echo "3. Deletar container se ele existir:"
 docker rm -f web-nginx-green
+docker rm -f web-nginx-blue
+docker rm -f web-nginx-white
 
 echo "4. Executar o container em background"
 docker run --name web-nginx-green -d -p 8080:80 fabiocaettano74/web-nginx:green
