@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: green  
+  name: white    
 spec:
   selector:
     matchLabels:
-      app: green
+      app: white
   template:
     metadata:
       labels:
-        app: green
+        app: white
     spec:
       containers:
-      - name: green
-        image: fabiocaettano74/web-nginx:green
+      - name: white
+        image: fabiocaettano74/web-nginx:white
         resources:
           limits:
             memory: "64Mi"
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: green-service
+  name: white-service
 spec:
   selector:
-    app: green
+    app: white
   ports:
   - port: 80
     targetPort: 80  
