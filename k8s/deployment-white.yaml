@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue    
+  name: white
 spec:
   selector:
     matchLabels:
-      app: blue
+      app: white
   template:
     metadata:
       labels:
-        app: blue
+        app: white
     spec:
       containers:
-      - name: blue
-        image: kubedevio/web-nginx:blue
+      - name: white
+        image: kubedevio/web-nginx:white
         resources:
           limits:
             memory: "64Mi"
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: blue-service
+  name: white-service
 spec:
   selector:
-    app: blue
+    app: white
   ports:
   - port: 80
     targetPort: 80  
