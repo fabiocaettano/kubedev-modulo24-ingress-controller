@@ -20,6 +20,7 @@ kubectl get all -n ingress-nginx
 
 5. Aplicar o manifesto:
 ```
+kubectl apply -f ./versao-02/deployment-white.yaml
 kubectl apply -f ./versao-02/deployment-blue.yaml
 kubectl apply -f ./versao-02/deployment-green.yaml
 kubectl get all
