@@ -31,10 +31,13 @@ kubectl get all
 kubectl apply -f ./versao-02/ingress.yaml
 ```
 
-7. Get ingress
+7. Get ingress, aguardar vincular o Extenal IP:
 ```
 $ kubectl get ingress
 ```
 
 
- 
+ 8. Testar os acessos:
+ http://fabiocaetanodev.com.br
+ http://blue.fabiocaetanodev.com.br
+ http://green.fabiocaetanodev.com.br
